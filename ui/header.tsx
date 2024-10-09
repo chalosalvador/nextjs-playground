@@ -1,24 +1,5 @@
 'use client';
 
-import styled from 'styled-components';
-
-const HeadContainer = styled.header`
-  position: relative;
-  height: 64px;
-  align-items: center;
-  padding: 0px 8px;
-  margin-bottom: 48px;
-  display: flex;
-  border: 0 solid #e5e7eb;
-  color: rgb(244 244 245);
-  grid-column-start: 2;
-  grid-column-end: 4;
-`;
-
-const Title = styled.span`
-  margin: 0 8px;
-`;
-
 const NextJsLogo = (props: any) => (
   <svg
     version="1.1"
@@ -35,9 +16,22 @@ const NextJsLogo = (props: any) => (
 
 export default function Header() {
   return (
-    <HeadContainer>
+    <header
+      style={{
+        position: 'relative',
+        height: '64px',
+        alignItems: 'center',
+        padding: '0px 8px',
+        marginBottom: '48px',
+        display: 'flex',
+        border: '0 solid #e5e7eb',
+        color: 'rgb(244 244 245)',
+        gridColumnStart: '2',
+        gridColumnEnd: '4',
+      }}
+    >
       <NextJsLogo height={40} fill={`rgb(244 244 245)`} />
-      <Title>The React Framework</Title>
-    </HeadContainer>
+      <span style={{ margin: '0 8px' }}>The React Framework</span>
+    </header>
   );
 }

@@ -4,7 +4,7 @@ import { demos, type Item } from '#/lib/demos';
 import { NextLogoDark } from '#/ui/next-logo';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -37,11 +37,13 @@ export function GlobalNav() {
         <div className="font-medium text-gray-100 group-hover:text-gray-400">
           Menu
         </div>
-        {isOpen ? (
-          <XMarkIcon className="block w-6 text-gray-400" />
-        ) : (
-          <Bars3Icon className="block w-6 text-gray-400" />
-        )}
+        {
+          isOpen
+            ? 'X'
+            : // <XMarkIcon className="block w-6 text-gray-400" />
+              '|'
+          // <Bars3Icon className="block w-6 text-gray-400" />
+        }
       </button>
 
       <div

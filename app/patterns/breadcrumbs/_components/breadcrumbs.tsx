@@ -1,4 +1,4 @@
-import { ChevronRightIcon } from '@heroicons/react/24/outline';
+// import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -12,9 +12,7 @@ export function Breadcrumbs({
       {items.map((item, i) => {
         return (
           <Fragment key={item.href}>
-            {i === 0 ? null : (
-              <ChevronRightIcon className="w-4 text-gray-500" />
-            )}
+            {i === 0 ? null : '>'}
 
             <Link
               key={item.href}

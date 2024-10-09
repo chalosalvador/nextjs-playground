@@ -1,6 +1,6 @@
 'use client';
 
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -44,11 +44,7 @@ export function MobileNavToggle({ children }: { children: React.ReactNode }) {
         <div className="font-medium text-gray-100 group-hover:text-gray-400">
           Menu
         </div>
-        {isOpen ? (
-          <XMarkIcon className="block w-6 text-gray-300" />
-        ) : (
-          <Bars3Icon className="block w-6 text-gray-300" />
-        )}
+        {isOpen ? 'X' : '|'}
       </button>
 
       <div
